@@ -1,0 +1,177 @@
+@import "../../global.scss";
+
+.intro {
+    background-color: #fff;
+    display: flex;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.lefti {
+    flex: 0.5;
+    overflow: hidden;
+
+    @media (max-width: 1920px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .imgContainer {
+        height: 700px;
+        width: 700px;
+        background-color: #e8d9f8;
+        border-radius: 50%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+
+        @include mobile {
+            align-items: start;
+        }
+
+        img {
+            height: 90%;
+
+            @media (max-width: 1920px) {
+                padding-left: 26px;
+            }
+
+            @include mobile {
+                height: 50%;
+            }
+
+        }
+    }
+
+}
+
+.righti {
+
+    flex: 0.5;
+    position: relative;
+
+
+
+    .wrapper {
+        height: 100%;
+        width: 100%;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include mobile {
+            padding-left: 0;
+            align-items: center;
+        }
+
+
+        h1 {
+            font-size: 60px;
+            margin: 10px 0;
+
+            @include mobile {
+                font-size: 30px;
+            }
+
+        }
+
+        h2 {
+            font-size: 35px;
+        }
+
+
+
+        h3 {
+            font-size: 30px;
+            color: #151313;
+
+            @include mobile {
+                font-size: 20px;
+            }
+
+            span {
+                font-size: inherit;
+                position: relative;
+                color: #c9a5ee;
+            }
+
+
+            .typewriter:before {
+                content: "";
+                position: absolute;
+                background-color: #fff;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border-left: 2px solid cornflowerblue;
+                animation: animate 4s steps(12) infinite;
+            }
+
+            @keyframes animate {
+
+                40% {
+                    left: 100%
+                }
+
+
+                60% {
+                    left: 100%
+                }
+
+                100% {
+                    left: 10%;
+                }
+            }
+
+        }
+
+
+
+        //     .ityped-cursor {
+        //         animation: blink 1s infinite;
+        //     }
+
+        //     @keyframes blink {
+        //         50% {
+        //             opacity: 1;
+        //         }
+
+        //         100% {
+        //             opacity: 0;
+        //         }
+        //     }
+
+        // #typewriter {
+        //     // 
+        // }
+
+
+        a {
+            position: absolute;
+            bottom: 10px;
+            left: 40%;
+
+            img {
+                width: 30px;
+                animation: arrowBlink 2s infinite;
+            }
+
+            @keyframes arrowBlink {
+                100% {
+                    opacity: 0;
+                }
+            }
+
+        }
+    }
+}
